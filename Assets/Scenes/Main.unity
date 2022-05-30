@@ -1636,6 +1636,7 @@ GameObject:
   - component: {fileID: 1002740916}
   - component: {fileID: 1002740915}
   - component: {fileID: 1002740914}
+  - component: {fileID: 1002740920}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -1690,7 +1691,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1002740920}
+        m_TargetAssemblyTypeName: GunFire, Assembly-CSharp
+        m_MethodName: Fire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -1785,8 +1798,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.23636496, y: 1, z: 1.2795005}
+  m_Center: {x: 0.0024954677, y: 0, z: 0.13975021}
 --- !u!23 &1002740917
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1844,12 +1857,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002740913}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.79, z: -0.43}
+  m_LocalPosition: {x: -0.314, y: 0.79, z: -0.375}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1002740920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002740913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d263c7869961c4aa0385fa603d3e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+  bullet: {fileID: 124846, guid: c08d8e39e38b0bc46b2cade287bd2961, type: 3}
+  barrel: {fileID: 1002740919}
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 3061c7b9b32d894478e4126ccce25ca3, type: 3}
 --- !u!1 &1116819845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2862,7 +2892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482142689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.031, z: 0.689}
+  m_LocalPosition: {x: -101, y: 0.031, z: 104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1760204773}
