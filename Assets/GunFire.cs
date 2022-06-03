@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunFire : MonoBehaviour
 {
-    public float speed = 40;
+    public float speed = 40f;
     public GameObject bullet;
     public Transform barrel;
     public AudioSource audioSource;
@@ -15,6 +15,6 @@ public class GunFire : MonoBehaviour
         GameObject spawnedBullet = Instantiate(bullet, barrel.position, barrel.rotation);
         spawnedBullet.GetComponent<Rigidbody>().velocity = speed * barrel.forward;
         audioSource.PlayOneShot(audioClip);
-        Destroy(spawnedBullet, 2);
+        Destroy(spawnedBullet, 5f);
     }
 }
